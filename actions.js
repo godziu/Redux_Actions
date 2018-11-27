@@ -1,6 +1,7 @@
-import uuid from uuid;
+import uuid from "uuid";
 
 const REMOVE_COMMENT = 'REMOVE_COMMENT';
+const CREATE_COMMENT = 'CREATE_COMMENT';
 const EDIT_COMMENT = 'EDIT_COMMENT';
 const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
@@ -16,8 +17,8 @@ function createComment(text) {
 function editComment(text, id) {
     return {
         type: EDIT_COMMENT,
-        text: 'Wyedytowany tekst komentarza',
-        id
+        id,
+        text,
     }
 }
 
